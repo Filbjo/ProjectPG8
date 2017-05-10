@@ -1,0 +1,23 @@
+.iris {
+    background-image: url("https://d1muf25xaso8hp.cloudfront.net/http://s3.amazonaws.com/appforest_uf/f1488965579281x583543983753770600/spot_862274_1920.jpg?w=1560&h=&fit=max");
+    background-repeat: no-repeat;
+    /*height: 100vh;*/
+    background-size: cover;
+
+    padding: 50px 80px;
+}
+
+.iris .card-panel {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+
+    text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+
+.iris .input-field label {
+    font-size: 1.2rem;
+}
