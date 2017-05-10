@@ -4,7 +4,7 @@
     /*height: 100vh;*/
     background-size: cover;
 
-    padding: 50px 80px;
+    /*padding: 50px 80px;*/
 }
 
 .iris .card-panel {
@@ -20,4 +20,8 @@
 
 .iris .input-field label {
     font-size: 1.2rem;
+}
+
+.rz-bg-color {
+    background-color: #42b5a6 !important;
 }
