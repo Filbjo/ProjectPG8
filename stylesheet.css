@@ -1,0 +1,18 @@
+.rz-bg-color {
+    background-color: #42b5a6 !important;
+}
+
+#breadcrumb .breadcrumb {
+    color: black ;
+    text-align: center;
+    padding-left: 50px;
+}
+
+#breadcrumb {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.breadcrumb:before {
+    color: black;
+}
