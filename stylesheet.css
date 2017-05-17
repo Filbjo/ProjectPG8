@@ -3,16 +3,32 @@
 }
 
 #breadcrumb .breadcrumb {
-    color: black ;
+    color: #42b5a6;
     text-align: center;
     padding-left: 50px;
 }
 
 #breadcrumb {
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     text-align: center;
+    font-size: 180%;
 }
 
-.breadcrumb:before {
-    color: black;
+#breadcrumb a {
+    text-decoration: none;
+    border-bottom: 2px solid #42b5a6;
+    padding-right: 50px;
+    width: 100px;
+}
+
+#breadcrumb a:visited {
+    color: #42b5a6;
+}
+
+
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+    
 }
