@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Steg 2</title>
+    <link rel="stylesheet" href="style-test.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="https://d1muf25xaso8hp.cloudfront.net/http://s3.amazonaws.com/appforest_uf/f1432201662502x414470874238759300/RZ_favicon.jpg?w=124.80000000000001&amp;h=&amp;fit=max">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+
+        </header>
+        <nav>
+            <div class="nav-wrapper rz-bg-color">
+                <a href="#" class="brand-logo">RACEZOO</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Hitta lopp</a></li>
+                    <li><a href="#">Mina lopp</a></li>
+                    <li><a href="#">Skapa lopp</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="row">
+                <div class="col s12 l6 push-l3">
+                    <h1>Steg 2</h1>
+                    <h2>Marknadsföring</h2>
+                    <p>
+                        Ladda upp er eventbanner som kommer att vara det första folk ser av ert lopp.
+                        Ladda också upp en mindre eventbild som syns i söklistor och sociala flöden.
+                        Lägg även motsvarande bankartor så att man får en bild av hur banan till kommer att vara.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 l6 push-l3">
+                    <form action="#">
+
+                        <label for="event-image">Eventbild</label>
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Välj bild</span>
+                                <input id="event-image" type="file" accept="image/*">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+
+
+
+                        <label for="event-banner">Event banner</label>
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Välj bild</span>
+                                <input id="event-banner" type="file" accept="image/*">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+
+                        <label for="track-maps">Bankartor</label>
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>Välj bild(er)</span>
+                                <input id="track-maps" type="file" accept="image/*" multiple>
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Ladda upp en eller flera bilder">
+                            </div>
+                        </div>
+
+
+
+                        <div class="input-field">
+                            <input id="website" type="text" class="validate" placeholder="http://">
+                            <label for="website">Hemsida</label>
+                        </div>
+
+
+                        <div class="input-field">
+                            <input id="email" type="email" class="validate" placeholder="@">
+                            <label for="email" data-error="wrong" data-success="right">E-post för kontakt</label>
+                        </div>
+
+
+                        <div class="input-field">
+                            <select class="icons">
+                                <option value="" disabled selected>Välj tuffhetsgrad</option>
+                                <option value="" data-icon="images/all.png" class="left circle">För alla</option>
+                                <option value="" data-icon="images/hard.png" class="left circle">Hårt</option>
+                                <option value="" data-icon="images/very-hard.png" class="left circle">Grymt hårt</option>
+                                <option value="" data-icon="images/inhuman.png" class="left circle">Omänskligt</option>
+                            </select>
+                            <label>Tuffhetsgrad</label>
+                        </div>
+
+                        <div class="input-field">
+                            <select class="icons">
+                                <option value="" disabled selected>Välj elevation</option>
+                                <option value="" data-icon="images/flat.png" class="left circle">Flackt</option>
+                                <option value="" data-icon="images/little-hilly.png" class="left circle">Småkuperat</option>
+                                <option value="" data-icon="images/hilly.png" class="left circle">Backigt</option>
+                                <option value="" data-icon="images/mountainous.png" class="left circle">Bergigt</option>
+                                <option value="" data-icon="images/monster-track.png" class="left circle">Monsterbana</option>
+                            </select>
+                            <label>Elevation</label>
+                        </div>
+
+
+                        <div class="input-field">
+                            <select class="icons">
+                                <option value="" disabled selected>Välj underlag</option>
+                                <option value="" data-icon="images/asphalt.png" class="left circle">Asfalt</option>
+                                <option value="" data-icon="images/trails.png" class="left circle">Stigar</option>
+                                <option value="" data-icon="images/terrain.png" class="left circle">Terräng</option>
+                                <option value="" data-icon="images/coastal.png" class="left circle">Kust</option>
+                                <option value="" data-icon="images/snow-ice.png" class="left circle">Snö/Is</option>
+                                <option value="" data-icon="images/mixed.png" class="left circle">Blandat</option>
+                            </select>
+                            <label>Underlag</label>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer rz-bg-color">
+            <div class="footer-copyright blue-grey-text text-darken-4">
+                <div class="container">
+                    © 2017 Copyright
+                    <a class="blue-grey-text text-darken-4 right" href="#">Mer länkar</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+    </script>
+</body>
+</html>
