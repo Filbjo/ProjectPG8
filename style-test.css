@@ -1,3 +1,12 @@
+/*---------------ALL PAGES--------------*/
+.rz-bg-color {
+    background-color: #42b5a6 !important;
+}
+
+
+
+
+/*----------------STEG 1----------------*/
 .iris {
     background-image: url("https://d1muf25xaso8hp.cloudfront.net/http://s3.amazonaws.com/appforest_uf/f1488965579281x583543983753770600/spot_862274_1920.jpg?w=1560&h=&fit=max");
     background-repeat: no-repeat;
@@ -22,8 +31,15 @@
     font-size: 1.2rem;
 }
 
+<<<<<<< HEAD
 .rz-bg-color {
     background-color: #42b5a6 !important;
 }
 
 
+=======
+
+
+
+/*----------------STEG 2----------------*/
+>>>>>>> origin/master
