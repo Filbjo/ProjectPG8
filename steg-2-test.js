@@ -5,6 +5,8 @@ $(document).ready(function() {
 });
 
 function readURL(input, imageId) {
+    $(imageId).hide();
+
       if (input.files && input.files[0]) {
           var reader = new FileReader();
 
@@ -14,7 +16,7 @@ function readURL(input, imageId) {
 
           reader.readAsDataURL(input.files[0]);
 
-          $(imageId).show('500');
+          $(imageId).show('1000', 'linear');
       }
   }
 
