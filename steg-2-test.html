@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>Steg 2</title>
-    <link rel="stylesheet" href="style-test.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="https://d1muf25xaso8hp.cloudfront.net/http://s3.amazonaws.com/appforest_uf/f1432201662502x414470874238759300/RZ_favicon.jpg?w=124.80000000000001&amp;h=&amp;fit=max">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="style-test.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body>
@@ -39,97 +40,108 @@
             <div class="row">
                 <div class="col s12 l6 push-l3">
                     <form action="#">
+                        <div class="row">
+                            <div class="col s12">
 
-                        <label for="event-image">Eventbild</label>
-                        <div class="file-field input-field">
-                            <div class="btn">
-                                <span>Välj bild</span>
-                                <input id="event-image" type="file" accept="image/*">
+
+                                <label for="event-image">Eventbild</label>
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                        <span>Välj bild</span>
+                                        <input id="event-image" type="file" accept="image/*">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                    </div>
+                                    <img id="event-image-preview" src="#" alt="Eventbild" />
+                                </div>
                             </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
+
+
+                            <div class="col s12">
+                                <label for="event-banner">Event banner</label>
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                        <span>Välj bild</span>
+                                        <input id="event-banner" type="file" accept="image/*">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                    </div>
+                                    <img id="event-banner-preview" src="#" alt="Event banner" />
+                                </div>
                             </div>
-                            <img id="event-image-preview" src="#" alt="Eventbild" />
-                        </div>
 
 
-
-                        <label for="event-banner">Event banner</label>
-                        <div class="file-field input-field">
-                            <div class="btn">
-                                <span>Välj bild</span>
-                                <input id="event-banner" type="file" accept="image/*">
+                            <div class="col s12">
+                                <label for="track-maps">Bankartor</label>
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                        <span>Välj bild(er)</span>
+                                        <input id="track-maps" type="file" accept="image/*" multiple>
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Ladda upp en eller flera bilder">
+                                    </div>
+                                    <img id="track-maps-preview" src="#" alt="Bankartor" />
+                                </div>
                             </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="website" type="text" class="validate" placeholder="http://">
+                                <label for="website">Hemsida</label>
                             </div>
-                            <img id="event-banner-preview" src="#" alt="Event banner" />
-                        </div>
 
-                        <label for="track-maps">Bankartor</label>
-                        <div class="file-field input-field">
-                            <div class="btn">
-                                <span>Välj bild(er)</span>
-                                <input id="track-maps" type="file" accept="image/*" multiple>
+
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate" placeholder="@">
+                                <label for="email" data-error="wrong" data-success="right">E-post för kontakt</label>
                             </div>
-                            <div class="file-path-wrapper">
-                                <input class="file-path validate" type="text" placeholder="Ladda upp en eller flera bilder">
+                        </div>
+
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select class="icons">
+                                    <option value="" disabled selected>Välj tuffhetsgrad</option>
+                                    <option value="1" data-icon="images/all.png" class="left circle">För alla</option>
+                                    <option value="2" data-icon="images/hard.png" class="left circle">Hårt</option>
+                                    <option value="3" data-icon="images/very-hard.png" class="left circle">Grymt hårt</option>
+                                    <option value="4" data-icon="images/inhuman.png" class="left circle">Omänskligt</option>
+                                </select>
+                                <label>Tuffhetsgrad</label>
                             </div>
-                            <img id="track-maps-preview" src="#" alt="Bankartor" />
+
+                            <div class="input-field col s12">
+                                <select class="icons">
+                                    <option value="" disabled selected>Välj elevation</option>
+                                    <option value="1" data-icon="images/flat.png" class="left circle">Flackt</option>
+                                    <option value="2" data-icon="images/little-hilly.png" class="left circle">Småkuperat</option>
+                                    <option value="3" data-icon="images/hilly.png" class="left circle">Backigt</option>
+                                    <option value="4" data-icon="images/mountainous.png" class="left circle">Bergigt</option>
+                                    <option value="5" data-icon="images/monster-track.png" class="left circle">Monsterbana</option>
+                                </select>
+                                <label>Elevation</label>
+                            </div>
+
+
+                            <div class="input-field col s12">
+                                <select class="icons">
+                                    <option value="" disabled selected>Välj underlag</option>
+                                    <option value="1" data-icon="images/asphalt.png" class="left circle">Asfalt</option>
+                                    <option value="2" data-icon="images/trails.png" class="left circle">Stigar</option>
+                                    <option value="3" data-icon="images/terrain.png" class="left circle">Terräng</option>
+                                    <option value="4" data-icon="images/coastal.png" class="left circle">Kust</option>
+                                    <option value="5" data-icon="images/snow-ice.png" class="left circle">Snö/Is</option>
+                                    <option value="6" data-icon="images/mixed.png" class="left circle">Blandat</option>
+                                </select>
+                                <label>Underlag</label>
+                            </div>
+
                         </div>
-
-
-
-                        <div class="input-field">
-                            <input id="website" type="text" class="validate" placeholder="http://">
-                            <label for="website">Hemsida</label>
-                        </div>
-
-
-                        <div class="input-field">
-                            <input id="email" type="email" class="validate" placeholder="@">
-                            <label for="email" data-error="wrong" data-success="right">E-post för kontakt</label>
-                        </div>
-
-
-                        <div class="input-field">
-                            <select class="icons">
-                                <option value="" disabled selected>Välj tuffhetsgrad</option>
-                                <option value="1" data-icon="images/all.png" class="left circle">För alla</option>
-                                <option value="2" data-icon="images/hard.png" class="left circle">Hårt</option>
-                                <option value="3" data-icon="images/very-hard.png" class="left circle">Grymt hårt</option>
-                                <option value="4" data-icon="images/inhuman.png" class="left circle">Omänskligt</option>
-                            </select>
-                            <label>Tuffhetsgrad</label>
-                        </div>
-
-                        <div class="input-field">
-                            <select class="icons">
-                                <option value="" disabled selected>Välj elevation</option>
-                                <option value="1" data-icon="images/flat.png" class="left circle">Flackt</option>
-                                <option value="2" data-icon="images/little-hilly.png" class="left circle">Småkuperat</option>
-                                <option value="3" data-icon="images/hilly.png" class="left circle">Backigt</option>
-                                <option value="4" data-icon="images/mountainous.png" class="left circle">Bergigt</option>
-                                <option value="5" data-icon="images/monster-track.png" class="left circle">Monsterbana</option>
-                            </select>
-                            <label>Elevation</label>
-                        </div>
-
-
-                        <div class="input-field">
-                            <select class="icons">
-                                <option value="" disabled selected>Välj underlag</option>
-                                <option value="1" data-icon="images/asphalt.png" class="left circle">Asfalt</option>
-                                <option value="2" data-icon="images/trails.png" class="left circle">Stigar</option>
-                                <option value="3" data-icon="images/terrain.png" class="left circle">Terräng</option>
-                                <option value="4" data-icon="images/coastal.png" class="left circle">Kust</option>
-                                <option value="5" data-icon="images/snow-ice.png" class="left circle">Snö/Is</option>
-                                <option value="6" data-icon="images/mixed.png" class="left circle">Blandat</option>
-                            </select>
-                            <label>Underlag</label>
-                        </div>
-
-
                     </form>
                 </div>
             </div>

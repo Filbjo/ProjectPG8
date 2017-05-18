@@ -44,3 +44,23 @@
     max-width: 250px;
     max-height: 250px;
 }
+
+.select-wrapper+label {
+    top: -25px;
+}
+
+.select-wrapper input.select-dropdown {
+    margin: 0 0 60px 0;    
+}
+
+.input-field label:not(.label-icon).active {
+    font-size: 1rem;
+}
+
+.input-field label {
+    font-size: 1rem;
+}
+
+label {
+    font-size: 1rem;
+}
