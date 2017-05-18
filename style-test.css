@@ -40,4 +40,7 @@
     background-color: #42b5a6 !important;
 }
 
-
+.file-field img {
+    max-width: 250px;
+    max-height: 250px;
+}

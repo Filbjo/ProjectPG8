@@ -49,6 +49,7 @@
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text">
                             </div>
+                            <img id="event-image-preview" src="#" alt="Eventbild" />
                         </div>
 
 
@@ -62,6 +63,7 @@
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text">
                             </div>
+                            <img id="event-banner-preview" src="#" alt="Event banner" />
                         </div>
 
                         <label for="track-maps">Bankartor</label>
@@ -73,6 +75,7 @@
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text" placeholder="Ladda upp en eller flera bilder">
                             </div>
+                            <img id="track-maps-preview" src="#" alt="Bankartor" />
                         </div>
 
 
@@ -92,10 +95,10 @@
                         <div class="input-field">
                             <select class="icons">
                                 <option value="" disabled selected>Välj tuffhetsgrad</option>
-                                <option value="" data-icon="images/all.png" class="left circle">För alla</option>
-                                <option value="" data-icon="images/hard.png" class="left circle">Hårt</option>
-                                <option value="" data-icon="images/very-hard.png" class="left circle">Grymt hårt</option>
-                                <option value="" data-icon="images/inhuman.png" class="left circle">Omänskligt</option>
+                                <option value="1" data-icon="images/all.png" class="left circle">För alla</option>
+                                <option value="2" data-icon="images/hard.png" class="left circle">Hårt</option>
+                                <option value="3" data-icon="images/very-hard.png" class="left circle">Grymt hårt</option>
+                                <option value="4" data-icon="images/inhuman.png" class="left circle">Omänskligt</option>
                             </select>
                             <label>Tuffhetsgrad</label>
                         </div>
@@ -103,11 +106,11 @@
                         <div class="input-field">
                             <select class="icons">
                                 <option value="" disabled selected>Välj elevation</option>
-                                <option value="" data-icon="images/flat.png" class="left circle">Flackt</option>
-                                <option value="" data-icon="images/little-hilly.png" class="left circle">Småkuperat</option>
-                                <option value="" data-icon="images/hilly.png" class="left circle">Backigt</option>
-                                <option value="" data-icon="images/mountainous.png" class="left circle">Bergigt</option>
-                                <option value="" data-icon="images/monster-track.png" class="left circle">Monsterbana</option>
+                                <option value="1" data-icon="images/flat.png" class="left circle">Flackt</option>
+                                <option value="2" data-icon="images/little-hilly.png" class="left circle">Småkuperat</option>
+                                <option value="3" data-icon="images/hilly.png" class="left circle">Backigt</option>
+                                <option value="4" data-icon="images/mountainous.png" class="left circle">Bergigt</option>
+                                <option value="5" data-icon="images/monster-track.png" class="left circle">Monsterbana</option>
                             </select>
                             <label>Elevation</label>
                         </div>
@@ -116,12 +119,12 @@
                         <div class="input-field">
                             <select class="icons">
                                 <option value="" disabled selected>Välj underlag</option>
-                                <option value="" data-icon="images/asphalt.png" class="left circle">Asfalt</option>
-                                <option value="" data-icon="images/trails.png" class="left circle">Stigar</option>
-                                <option value="" data-icon="images/terrain.png" class="left circle">Terräng</option>
-                                <option value="" data-icon="images/coastal.png" class="left circle">Kust</option>
-                                <option value="" data-icon="images/snow-ice.png" class="left circle">Snö/Is</option>
-                                <option value="" data-icon="images/mixed.png" class="left circle">Blandat</option>
+                                <option value="1" data-icon="images/asphalt.png" class="left circle">Asfalt</option>
+                                <option value="2" data-icon="images/trails.png" class="left circle">Stigar</option>
+                                <option value="3" data-icon="images/terrain.png" class="left circle">Terräng</option>
+                                <option value="4" data-icon="images/coastal.png" class="left circle">Kust</option>
+                                <option value="5" data-icon="images/snow-ice.png" class="left circle">Snö/Is</option>
+                                <option value="6" data-icon="images/mixed.png" class="left circle">Blandat</option>
                             </select>
                             <label>Underlag</label>
                         </div>
@@ -142,10 +145,7 @@
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $('select').material_select();
-    });
-    </script>
+
+    <script type="text/javascript" src="steg-2-test.js"></script>
 </body>
 </html>
