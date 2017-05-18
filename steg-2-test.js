@@ -1,5 +1,7 @@
 $(document).ready(function() {
     $('select').material_select();
+
+    $("#event-image-preview, #event-banner-preview, #track-maps-preview").hide();
 });
 
 function readURL(input, imageId) {
@@ -11,11 +13,15 @@ function readURL(input, imageId) {
           };
 
           reader.readAsDataURL(input.files[0]);
+
+          $(imageId).show('500');
       }
   }
 
+
   $("#event-image").change(function(){
       readURL(this, '#event-image-preview');
+
   });
 
   $("#event-banner").change(function(){
