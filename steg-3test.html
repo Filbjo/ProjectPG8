@@ -30,9 +30,9 @@
             <div class="row" id="breadcrumb">
                 <h1>Steg 3</h1>
                 <div class="col s12 flexit valign-wrapper">
-                    <a href="#!">Bilder</a><img src="images/between.png" alt="navigation" height="60" width="60">
-                    <a href="#!">Kontakt</a><img src="images/between.png" alt="navigation" height="60" width="60">
-                    <a href="#!">Tävlingsprofil</a><img src="images/front.png" alt="navigation" height="60" width="60">
+                    <img src="images/behind.png" alt="navigation" height="60" width="60">
+                    <a href="distance">Distanser</a><img src="images/between.png" alt="navigation" height="60" width="60">
+                    <a href="start-group">Startgrupper</a><img src="images/front.png" alt="navigation" height="60" width="60">
                 </div>
             </div>
             <div class="row">
@@ -51,41 +51,98 @@
                             <div class="col s12">
                                 <h3>Skapa ny distans</h3>
                             </div>
-                            <div class="input-field col s12">
-                                <select id="distance">
-                                    <option value="" disabled selected>Välj distans</option>
-                                    <option value="5">5 km</option>
-                                    <option value="10">10 km</option>
-                                    <option value="21">Halvmaraton (~21 km)</option>
-                                    <option value="42">Maraton (~42 km)</option>
-                                    <option value="custom">Ange egen...</option>
-                                </select>
-                                <label>Distans</label>
-                                <input id="custom-distance" type="text" class="validate" placeholder="Ange din egen distans här...">
+                            <div class="col s12">
+                                <div class="input-field">
+                                    <select id="distance">
+                                        <option value="" disabled selected>Välj distans</option>
+                                        <option value="5">5 km</option>
+                                        <option value="10">10 km</option>
+                                        <option value="21">Halvmaraton (~21 km)</option>
+                                        <option value="42">Maraton (~42 km)</option>
+                                        <option value="custom">Ange egen...</option>
+                                    </select>
+                                    <input id="custom-distance" type="text" class="validate" placeholder="Ange din egen distans här...">
+                                    <label>Distans</label>
+                                </div>
                             </div>
 
 
 
-                            <div class="input-field col s12">
-                                <select id="class">
-                                    <option value="" disabled selected>Välj klass</option>
-                                    <option value="motion">Motion</option>
-                                    <option value="elit">Elit</option>
-                                    <option value="master">Master</option>
-                                    <option value="age-group">Age group</option>
-                                    <option value="lag">Lag</option>
-                                    <option value="stafett">Stafett</option>
-                                    <option value="kids">Kids (under 13 år)</option>
-                                    <option value="custom">Ange egen...</option>
-                                </select>
-                                <label>Klass</label>
-                                <input id="custom-class" type="text" class="validate" placeholder="Ange din egen klass här...">
+                            <div class="col s12">
+                                <div class="input-field ">
+                                    <select id="class">
+                                        <option value="" disabled selected>Välj klass</option>
+                                        <option value="motion">Motion</option>
+                                        <option value="elit">Elit</option>
+                                        <option value="master">Master</option>
+                                        <option value="age-group">Age group</option>
+                                        <option value="lag">Lag</option>
+                                        <option value="stafett">Stafett</option>
+                                        <option value="kids">Kids (under 13 år)</option>
+                                        <option value="custom">Ange egen...</option>
+                                    </select>                                    
+                                    <input id="custom-class" type="text" class="validate" placeholder="Ange din egen klass här...">
+                                    <label>Klass</label>
+                                </div>
                             </div>
+
+                            <div class="col s12">
+                                <div class="input-field inline">
+                                    <input id="max-amount" type="text" class="validate" value="100">
+                                    <label for="max-amount">Max antal anmälningar</label>
+                                </div>
+                            </div>
+
+                            <div class="col s6">
+                                <div class="input-field inline">
+                                    <input id="registration-fee" type="text" class="validate" value="0">
+                                    <label for="registration-fee">Anmälningsavgift</label>
+                                </div>
+                                <span>SEK</span>
+                            </div>
+                            <div class="col s6">
+                                <div class="input-field inline">
+                                    <select id="moms">
+                                        <option value="0" selected>0</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                    <label for="moms">Anmälningsavgift</label>
+                                </div>
+                                <span>%</span>
+                            </div>
+
+
+
+                            <div class="col s12">
+                                <input type="checkbox" class="filled-in" id="include-start-number" />
+                                <label for="include-start-number">Inkludera startnummer</label>
+
+
+
+                                <div id="startnumber" class="input-field col s12">
+                                    <div class="input-field inline">
+                                        <input id="start" type="text" class="validate" value="1">
+                                        <label for="start">Börjar med nummer</label>
+                                    </div>
+                                    <div class="input-field inline">
+                                        <input id="end" type="text" class="validate" value="">
+                                        <label for="end">Slutar med nummer</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col s12">
+                                <h3>Skapa ny startgrupp</h3>
+                            </div>
+
 
                             <div class="col s12 arrow-nav">
-                                <a class="btn left"><i class="material-icons left">chevron_left</i>Föregående steg</a>
+                                <a class="btn left"><i class="material-icons left">chevron_left</i>Tillbaka</a>
                                 <a class="btn right"><i class="material-icons right">chevron_right</i>Nästa steg</a>
                             </div>
+
                         </div>
                     </form>
                 </div>
