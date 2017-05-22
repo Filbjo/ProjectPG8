@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Steg 2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="https://d1muf25xaso8hp.cloudfront.net/http://s3.amazonaws.com/appforest_uf/f1432201662502x414470874238759300/RZ_favicon.jpg?w=124.80000000000001&amp;h=&amp;fit=max">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="style-test.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body id="step-3">
+    <div id="container">
+        <header>
+
+        </header>
+        <nav>
+            <div class="nav-wrapper rz-bg-color">
+                <a href="#" class="brand-logo">RACEZOO</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Hitta lopp</a></li>
+                    <li><a href="#">Mina lopp</a></li>
+                    <li><a href="#">Skapa lopp</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="row" id="breadcrumb">
+                <h1>Steg 3</h1>
+                <div class="col s12 flexit valign-wrapper">
+                    <a href="#!">Bilder</a><img src="images/between.png" alt="navigation" height="60" width="60">
+                    <a href="#!">Kontakt</a><img src="images/between.png" alt="navigation" height="60" width="60">
+                    <a href="#!">Tävlingsprofil</a><img src="images/front.png" alt="navigation" height="60" width="60">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 l6 push-l3">
+
+                    <h2>Distanser</h2>
+                    <p>
+                        Här väljer ni vilka distanser man ska kunna anmäla sig till och vad startavgiften är.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 l6 push-l3">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col s12">
+                                <h3>Skapa ny distans</h3>
+                            </div>
+                            <div class="input-field col s12">
+                                <select id="distance">
+                                    <option value="" disabled selected>Välj distans</option>
+                                    <option value="5">5 km</option>
+                                    <option value="10">10 km</option>
+                                    <option value="21">Halvmaraton (~21 km)</option>
+                                    <option value="42">Maraton (~42 km)</option>
+                                    <option value="custom">Ange egen...</option>
+                                </select>
+                                <label>Distans</label>
+                                <input id="custom-distance" type="text" class="validate" placeholder="Ange din egen distans här...">
+                            </div>
+
+
+
+                        <div class="input-field col s12">
+                            <select id="class">
+                                <option value="" disabled selected>Välj klass</option>
+                                <option value="motion">Motion</option>
+                                <option value="elit">Elit</option>
+                                <option value="master">Master</option>
+                                <option value="age-group">Age group</option>
+                                <option value="lag">Lag</option>
+                                <option value="stafett">Stafett</option>
+                                <option value="kids">Kids (under 13 år)</option>
+                                <option value="custom">Ange egen...</option>
+                            </select>
+                            <label>Klass</label>
+                            <input id="custom-class" type="text" class="validate" placeholder="Ange din egen klass här...">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer rz-bg-color">
+        <div class="footer-copyright blue-grey-text text-darken-4">
+            <div class="container">
+                © 2017 Copyright
+                <a class="blue-grey-text text-darken-4 right" href="#">Mer länkar</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+<script type="text/javascript" src="steg-3-test.js"></script>
+</body>
+</html>

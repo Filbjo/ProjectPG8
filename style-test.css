@@ -112,3 +112,13 @@ label {
 .flexit {
     justify-content: center;
 }
+
+
+/*----------------STEG 3----------------*/
+#step-3 .select-wrapper+label {
+    top: 0;
+}
+
+#step-3 .select-wrapper input.select-dropdown {
+    margin: 0 0 20px 0;
+}
