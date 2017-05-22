@@ -67,8 +67,8 @@ body {
     padding-right: 100px;
 }
 #wrapper {
-    width: 800px;
-    height: 900px;
+    /*width: 800px;*/
+    /*height: 900px;*/
     margin: 0 auto;
 
 }
@@ -79,7 +79,7 @@ body {
 }
 
 footer {
-    position: flex;
-    margin: 0 auto;
-    background-color: darkgray;
+    /*position: flex;*/
+    /*margin: 0 auto;*/
+    /*background-color: darkgray;*/
 }

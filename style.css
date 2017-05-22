@@ -22,14 +22,18 @@
     font-size: 3rem;
 }
 
-i.left {
+.arrow-nav i.left {
     margin-right: 10px;
     margin-left: -15px;
 }
 
-i.right {
+.arrow-nav i.right {
     margin-right: -15px;
     margin-left: 10px;
+}
+
+.col.bot-space {
+    margin-bottom: 30px;
 }
 
 
@@ -84,7 +88,7 @@ i.right {
 }*/
 
 .select-wrapper input.select-dropdown {
-    margin: 0 0 60px 0;
+    /*margin: 0 0 60px 0;*/
 }
 
 .input-field label:not(.label-icon).active {
@@ -149,4 +153,11 @@ label {
 
 #step-3 .select-wrapper input.select-dropdown {
     margin: 0 0 20px 0;
+}
+
+#create-distance, #create-start-group {
+    border: 1px solid #000;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 5px 0 20px 0;
 }
