@@ -27,11 +27,11 @@
 
             <div class="row" id="breadcrumb">
                 <div class="col s12 flexit valign-wrapper">
-                    <!-- <img src="images/behind.png" alt="navigation" height="60" width="60"> -->
                     <!--<img src="images/behind.png" alt="navigation" height="60" width="60">-->
-                    <a href="#basic">Grunduppgifter</a><img src="images/between.png" alt="navigation" height="60" width="60">
-                    <a href="#account">Konto</a><img src="images/between.png" alt="navigation" height="60" width="60">
-                    <a href="#profile">bekäftelse</a><img src="images/front.png" alt="navigation" height="60" width="60">
+                    <!--<img src="images/behind.png" alt="navigation" height="60" width="60">-->
+                    <a href="#images">Bilder</a><img src="images/between.png" alt="navigation" height="60" width="60">
+                    <a href="#contact">Kontakt</a><img src="images/between.png" alt="navigation" height="60" width="60">
+                    <a href="#profile">Tävlingsprofil</a><img src="images/front.png" alt="navigation" height="60" width="60">
                 </div>
             </div>
 
@@ -54,52 +54,71 @@
         <div class="row">
             <div class="col s12 l6 push-l3">
                 <div class="col s12">
-                    <h3 id="basic">Grunderna</h3>
-                </div>
-                <div class="input-field col s12">
-                    <input id="race_name" type="text" class="validate">
-                    <label for="Race_name">Race Namn</label>
-                </div>
-                <div class="input-field col s12">
-                    <select>
-                        <option value="1">Typ av lopp</option>
-                        <option value="2">Löpning</option>
-                        <option value="3">Trail run</option>
-                        <option value="4">Triathlon</option>
-                        <option value="2">OCR</option>
-                        <option value="3">Cykling</option>
-                        <option value="4">Simning</option>
-                        <option value="2">Längdskidor</option>
-                        <option value="3">Swim & run</option>
-                        <option value="4">Mulitisport</option>
-                        <option value="2">Duathlon</option>
-                        <option value="3">Enduro MTB</option>
-                    </select>
-                    <label>Sport</label>
+                    <h3 id="account">Arrangörens konto</h3>
                 </div>
                 <div class="input-field col s12 l6">
-                    <input id="date" type="text" class="datepicker validate">
-                    <label for="date">Datum</label>
-                </div>
-                <div class="input-field col s12 l6">
-                    <input id="tid" type="text" class="validate">
-                    <label for="tid">Tid</label>
+                    <input id="email" type="email" class="validate">
+                    <label for="email">E-post</label>
                 </div>
 
-                <div class="input-field col s12">
-                    <input id="adress" type="text" class="validate">
-                    <label for="adress">Adress till tävlingområde</label>
+                <div class="input-field col s12 l6">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Lösenord</label>
                 </div>
-                <div class="input-field col s12">
-                    <input id="Organisatör" type="text" class="validate">
-                    <label for="Organisatör">Organisatör</label>
+
+
+                <div class="input-field col s12 l6">
+                    <input id="name" type="text" class="validate">
+                    <label for="text">Förnamn</label>
+                </div>
+
+
+                <div class="input-field col s12 l6">
+                    <input id="lastname" type="text" class="validate">
+                    <label for="text">Efternamn</label>
+                </div>
+
+
+
+                <div class="input-field col s12 l12">
+                    <input id="address" type="text" class="validate">
+                    <label for="text">Adress</label>
+                </div>
+
+                <div class="input-field col s12 l6">
+                    <input id="phonenumber" type="text" class="validate">
+                    <label for="text">Telefon</label>
+                </div>
+
+
+                <div class="input-field col s12 l6">
+                    <input id="club" type="text" class="validate">
+                    <label for="text">Förening/klubb</label>
+                </div>
+
+                <div class="col s12"><label for="gender">Kön</label></div>
+                <div class="input-field col s12 l6">
+                    <input id="male" type="radio" name="gender" value="male">
+                    <label for="male">Man</label>
+                    <input id="female" type="radio" name="gender" value="female">
+                    <label for="female">Kvinna</label>
+                </div>
+
+                <div class="input-field col s12 l6">
+                    <input id="birthdate" type="text" class="datepicker validate">
+                    <label for="birthdate">Födelsedatum</label>
+                </div>
+
+                <div class="input-field col s12 l12">
+                    <input id="CheckEmail" type="email" class="validate">
+                    <label for="email">Bekräfta mailadress</label>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col s12 l6 push-l3 arrow-nav">
                 <!-- <a class="btn left"><i class="material-icons left">chevron_left</i>Tillbaka</a> -->
-                <a class="btn right" href="s1-2.html"><i class="material-icons right">chevron_right</i>Nästa steg</a>
+                <a class="btn right" href="s2.html"><i class="material-icons right">chevron_right</i>Nästa steg</a>
             </div>
         </div>
     </div>
