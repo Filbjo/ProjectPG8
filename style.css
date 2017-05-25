@@ -1,4 +1,8 @@
 /*---------------ALL PAGES--------------*/
+body {
+    min-width: 250px;
+}
+
 .rz-bg-color {
     background-color: #42b5a6 !important;
 }
@@ -163,8 +167,32 @@ label {
 }
 
 
+#created-distances-container {
+    /*border: 1px solid rgba(0,0,0,0.6);*/
+    /*border-radius: 2px;*/
+    /*padding: 2px;*/
+}
+
+#created-distances-container .head {
+    font-weight: bold;
+}
+
+#created-distances-container .data {
+}
+
+.created-distance {
+    background-color: #47a5b6;
+    border-radius: 2px;
+}
+
 
 /*----------------STEG 5----------------*/
 .pepp {
-    
+    font-weight: bold;
+    color: #42b5a7;
+}
+
+.race-complete-txt {
+    font-weight: bold;
+    font-size: 1.2rem;
 }

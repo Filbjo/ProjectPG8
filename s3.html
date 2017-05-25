@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 l6 push-l3">
+                <div class="col s12 l8 push-l2">
                     <h2 id="distances">Distanser</h2>
                     <p>
                         Här väljer ni vilka distanser man ska kunna anmäla sig till och vad startavgiften är.
@@ -45,184 +45,220 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 l6 push-l3">
-                    <form action="#">
-                        <div id="create-distance" class="row">
-                            <div class="col s12 bot-space">
-                                <h3>Skapa ny distans</h3>
-                            </div>
-
-                            <div class="col s12 bot-space">
-                                <div class="input-field">
-                                    <select id="distance">
-                                        <option value="" disabled selected>Välj distans</option>
-                                        <option value="5">5 km</option>
-                                        <option value="10">10 km</option>
-                                        <option value="21">Halvmaraton (~21 km)</option>
-                                        <option value="42">Maraton (~42 km)</option>
-                                        <option value="custom">Ange egen...</option>
-                                    </select>
-                                    <input id="custom-distance" type="text" class="validate" placeholder="Ange din egen distans här...">
-                                    <label>Distans</label>
-                                </div>
-                            </div>
-
-
-
-                            <div class="col s12 bot-space">
-                                <div class="input-field ">
-                                    <select id="class">
-                                        <option value="" disabled selected>Välj klass</option>
-                                        <option value="motion">Motion</option>
-                                        <option value="elit">Elit</option>
-                                        <option value="master">Master</option>
-                                        <option value="age-group">Age group</option>
-                                        <option value="lag">Lag</option>
-                                        <option value="stafett">Stafett</option>
-                                        <option value="kids">Kids (under 13 år)</option>
-                                        <option value="custom">Ange egen...</option>
-                                    </select>
-                                    <input id="custom-class" type="text" class="validate" placeholder="Ange din egen klass här...">
-                                    <label>Klass</label>
-                                </div>
-                            </div>
-
-                            <div class="col s12 bot-space">
-                                <span class="inline">Antal deltagare i gruppanmälan:</span>
-                                <input class="with-gap" name="group1" type="radio" id="unlimited-participants-in-group" value="unlimited" checked="checked" />
-                                <label for="unlimited-participants-in-group">Obegränsat</label>
-                                <input class="with-gap" name="group1" type="radio" id="limited-participants-in-group" value="limited" />
-                                <label for="limited-participants-in-group">Begränsat</label>
-                                <input id="custom-participants-in-group" type="text" class="validate" placeholder="Ange antal deltagare...">
-                            </div>
-
-                            <div class="col s12 bot-space">
-                                <span class="inline">Anmälningsavgiften gäller:</span>
-                                <input class="with-gap" name="group2" type="radio" id="individually" value="individually" checked="checked" />
-                                <label for="individually">Individuellt</label>
-                                <input class="with-gap" name="group2" type="radio" id="group" value="group" />
-                                <label for="group">Grupp</label>
-                            </div>
-
-
-                            <div class="col s12 bot-space">
-                                <div class="input-field inline">
-                                    <input id="max-amount" type="text" class="validate" value="100">
-                                    <label for="max-amount">Max antal anmälningar</label>
-                                </div>
-                            </div>
-
-                            <div class="col s6 bot-space">
-                                <div class="input-field inline">
-                                    <input id="registration-fee" type="text" class="validate" value="0">
-                                    <label for="registration-fee">Anmälningsavgift</label>
-                                </div>
-                                <span>SEK</span>
-                            </div>
-                            <div class="col s6 bot-space">
-                                <div class="input-field inline">
-                                    <select id="moms">
-                                        <option value="0" selected>0</option>
-                                        <option value="6">6</option>
-                                    </select>
-                                    <label for="moms">Moms</label>
-                                </div>
-                                <span>%</span>
-                            </div>
-
-
-
-                            <div class="col s12 bot-space">
-                                <hr />
-                                <input type="checkbox" class="filled-in" id="include-start-number" />
-                                <label for="include-start-number">Inkludera startnummer</label>
-
-
-                                <div id="start-number" class="col s12">
-                                    <div class="input-field inline">
-                                        <input id="start" type="text" class="validate" value="1">
-                                        <label for="start">Börjar med nummer</label>
-                                    </div>
-                                    <div class="input-field inline">
-                                        <input id="end" type="text" class="validate" value="100">
-                                        <label for="end">Slutar med nummer</label>
-                                    </div>
-                                </div>
-                                <hr />
-                            </div>
-
-
-
-                            <div class="col s12 center-align">
-                                <a class="btn">Spara distans</a>
-                            </div>
-
+                <div class="col s12 l8 push-l2">
+                    <h5>Alla distanser</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 l8 push-l2" id="created-distances-container">
+                    <!-- <div class="col s12 item" data-value-id="">
+                    <div class="col s6 head">Distans</div>
+                    <div class="col s6 data"><span data-value-distance=""></span> km</div>
+                    <div class="col s6 head">Klass</div>
+                    <div class="col s6 data"><span data-value-class=""></span></div>
+                    <div class="col s6 head">Antal deltagare i gruppanmälan</div>
+                    <div class="col s6 data"><span data-value-amount-in-group=""></span></div>
+                    <div class="col s6 head">Anmälningsavgiften gäller</div>
+                    <div class="col s6 data"><span data-value-price-for=""></span></div>
+                    <div class="col s6 head">Pris (inkl. <span data-value-tax=""></span>% moms)</div>
+                    <div class="col s6 data"><span data-value-price=""></span> SEK</div>
+                    <div class="col s6 head">Antal deltagare</div>
+                    <div class="col s6 data"><span data-value-registered-participants="0"></span>/<span data-value-max-participants=""></span></div>
+                </div> -->
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th>Distans</th>
+                            <th>Klass</th>
+                            <th>Antal deltagare i gruppanmälan</th>
+                            <th>Anmälningsavgiften gäller</th>
+                            <th>Pris</th>
+                            <th>Antal deltagare</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="distance-items-holder">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 l6 push-l2">
+                <form action="#" id="new-distance">
+                    <div id="create-distance" class="row">
+                        <div class="col s12 bot-space">
+                            <h3>Skapa ny distans</h3>
                         </div>
-                    </form>
-                </div>
-            </div>
 
-
-
-
-            <div class="row">
-                <div class="col s12 l6 push-l3">
-                    <h2 id="start-groups">Startgrupper</h2>
-                    <p>
-                        Här kan du skapa startgupp och välja vilka distanser den ska gälla. Tänk på att om du väljer
-                        att ange startgrupp för distansen så blir den obligatorisk för alla deltagare som väljer den distansen.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 l6 push-l3">
-                    <form action="#">
-                        <div id="create-start-group" class="row">
-                            <div class="col s12 bot-space">
-                                <h3>Skapa ny startgrupp</h3>
-                            </div>
-
-                            <div class="col s12 l6 bot-space">
-                                <div class="input-field">
-                                    <input id="start-group-name" type="text" class="validate" placeholder="SG-1">
-                                    <label for="start-group-name">Namn</label>
-                                </div>
-                            </div>
-
-                            <div class="col s12 l6 bot-space">
-                                <div class="input-field">
-                                    <input id="start-group-amount" type="text" class="validate" placeholder="50">
-                                    <label for="start-group-amount">Antal deltagare</label>
-                                </div>
-                            </div>
-
-                            <div class="col s12 center-align">
-                                <a class="btn">Spara startgrupp</a>
+                        <div class="col s12 l6 bot-space">
+                            <div class="input-field">
+                                <select id="distance">
+                                    <option value="" disabled selected>Välj distans</option>
+                                    <option value="5 km">5 km</option>
+                                    <option value="10 km">10 km</option>
+                                    <option value="Halvmaraton (~21 km)">Halvmaraton (~21 km)</option>
+                                    <option value="Maraton (~42 km)">Maraton (~42 km)</option>
+                                    <option value="custom">Ange egen...</option>
+                                </select>
+                                <input id="custom-distance" type="text" class="validate" placeholder="Ange din egen distans här..." name="distance">
+                                <label>Distans</label>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col s12 l6 push-l3 arrow-nav">
-                    <a class="btn left" href="s2.html"><i class="material-icons left">chevron_left</i>Tillbaka</a>
-                    <a class="btn right" href="#"><i class="material-icons right">chevron_right</i>Nästa steg</a>
-                </div>
-            </div>
-        </main>
-        <footer class="page-footer rz-bg-color">
-            <div class="footer-copyright blue-grey-text text-darken-4">
-                <div class="container">
-                    © 2017 Copyright
-                    <a class="blue-grey-text text-darken-4 right" href="#">Mer länkar</a>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
-    <script type="text/javascript" src="s3.js"></script>
+
+                        <div class="col s12 l6 bot-space">
+                            <div class="input-field ">
+                                <select id="class">
+                                    <option value="" disabled selected>Välj klass</option>
+                                    <option value="Motion">Motion</option>
+                                    <option value="Elit">Elit</option>
+                                    <option value="Master">Master</option>
+                                    <option value="Age group">Age group</option>
+                                    <option value="Lag">Lag</option>
+                                    <option value="Stafett">Stafett</option>
+                                    <option value="Kids (under 13 år)">Kids (under 13 år)</option>
+                                    <option value="custom">Ange egen...</option>
+                                </select>
+                                <input id="custom-class" type="text" class="validate" placeholder="Ange din egen klass här..." name="class">
+                                <label>Klass</label>
+                            </div>
+                        </div>
+
+                        <div class="col s12 bot-space">
+                            <span class="inline">Antal deltagare i gruppanmälan:</span>
+                            <input class="with-gap" name="amount-in-group" type="radio" id="unlimited-participants-in-group" value="Obegränsat" checked="checked" />
+                            <label for="unlimited-participants-in-group">Obegränsat</label>
+                            <input class="with-gap" name="amount-in-group" type="radio" id="limited-participants-in-group" value="Begränsat" />
+                            <label for="limited-participants-in-group">Begränsat</label>
+                            <input id="custom-participants-in-group" type="text" name="max-amount-in-group" class="validate" placeholder="Ange antal deltagare..." />
+                        </div>
+
+                        <div class="col s12 bot-space">
+                            <span class="inline">Anmälningsavgiften gäller:</span>
+                            <input class="with-gap" name="price-for" type="radio" id="individually" value="Individuellt" checked="checked" />
+                            <label for="individually">Individuellt</label>
+                            <input class="with-gap" name="price-for" type="radio" id="group" value="Grupp" />
+                            <label for="group">Grupp</label>
+                        </div>
+
+
+                        <div class="col s12 bot-space">
+                            <div class="input-field inline">
+                                <input id="max-amount" type="text" class="validate" value="100" name="max-participants" />
+                                <label for="max-amount">Max antal anmälningar</label>
+                            </div>
+                        </div>
+
+                        <div class="col s6 bot-space">
+                            <div class="input-field inline">
+                                <input id="registration-fee" type="text" class="validate" value="0" name="price">
+                                <label for="registration-fee">Anmälningsavgift</label>
+                            </div>
+                            <span>SEK</span>
+                        </div>
+                        <div class="col s6 bot-space">
+                            <div class="input-field inline">
+                                <select id="moms" name="tax">
+                                    <option value="0" selected>0</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <label for="moms">Moms</label>
+                            </div>
+                            <span>%</span>
+                        </div>
+
+
+                        <hr />
+                        <div class="col s12 bot-space">
+                            <input type="checkbox" class="filled-in" id="include-start-number" />
+                            <label for="include-start-number">Inkludera startnummer</label>
+
+                        </div>
+                        <div id="start-number" class="col s12">
+                            <div class="input-field inline">
+                                <input id="start" type="text" class="validate" value="1">
+                                <label for="start">Börjar med nummer</label>
+                            </div>
+                            <div class="input-field inline">
+                                <input id="end" type="text" class="validate" value="100">
+                                <label for="end">Slutar med nummer</label>
+                            </div>
+                        </div>
+                        <hr />
+
+
+
+                        <div class="col s12 center-align">
+                            <a class="btn" id="save-distance">Spara distans</a>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col s12 l8 push-l2">
+                <h2 id="start-groups">Startgrupper</h2>
+                <p>
+                    Här kan du skapa startgupp och välja vilka distanser den ska gälla. Tänk på att om du väljer
+                    att ange startgrupp för distansen så blir den obligatorisk för alla deltagare som väljer den distansen.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 l6 push-l2">
+                <form action="#">
+                    <div id="create-start-group" class="row">
+                        <div class="col s12 bot-space">
+                            <h3>Skapa ny startgrupp</h3>
+                        </div>
+
+                        <div class="col s12 l6 bot-space">
+                            <div class="input-field">
+                                <input id="start-group-name" type="text" class="validate" placeholder="SG-1">
+                                <label for="start-group-name">Namn</label>
+                            </div>
+                        </div>
+
+                        <div class="col s12 l6 bot-space">
+                            <div class="input-field">
+                                <input id="start-group-amount" type="text" class="validate" placeholder="50">
+                                <label for="start-group-amount">Antal deltagare</label>
+                            </div>
+                        </div>
+
+                        <div class="col s12 center-align">
+                            <a class="btn">Spara startgrupp</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 l8 push-l2 arrow-nav">
+                <a class="btn left" href="s2.html"><i class="material-icons left">chevron_left</i>Tillbaka</a>
+                <a class="btn right" href="#"><i class="material-icons right">chevron_right</i>Nästa steg</a>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer rz-bg-color">
+        <div class="footer-copyright blue-grey-text text-darken-4">
+            <div class="container">
+                © 2017 Copyright
+                <a class="blue-grey-text text-darken-4 right" href="#">Mer länkar</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+<script type="text/javascript" src="s3.js"></script>
 </body>
 </html>
