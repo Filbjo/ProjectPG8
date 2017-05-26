@@ -27,99 +27,108 @@
 
             <div class="row" id="breadcrumb">
                 <div class="col s12 flexit valign-wrapper">
-                    <!--<img src="images/behind.png" alt="navigation" height="60" width="60">-->
-                    <!--<img src="images/behind.png" alt="navigation" height="60" width="60">-->
-                    <a href="#images">Bilder</a><img src="images/between.png" alt="navigation" height="60" width="60">
-                    <a href="#contact">Kontakt</a><img src="images/between.png" alt="navigation" height="60" width="60">
-                    <a href="#profile">Tävlingsprofil</a><img src="images/front.png" alt="navigation" height="60" width="60">
+                    <img src="images/start.png" alt="navigation" height="60" width="60">
+                    <a href="#">Grunduppgifter</a>
+                    <img src="images/between.png" alt="navigation" height="60" width="60">
+                    <a href="#">Konto</a>
+                    <img src="images/between.png" alt="navigation" height="60" width="60">
+                    <a href="#">Slutför</a>
+                    <img src="images/front.png" alt="navigation" height="60" width="60">
                 </div>
             </div>
 
-            <!-- <div class="row" id="icons">
-            <div class="col s12 flexit valign-wrapper">
-            <i class="medium material-icons">mode_edit</i>
-            <i class="medium material-icons">mail_outline</i>
-            <i class="medium material-icons">done</i>
-        </div>
-    </div> -->
-    <div id="wrapper">
-        <div class="row">
-            <div class="col s12 l6 push-l3">
-                <h2>Hjälp folk att hitta ert lopp</h2>
-                <p>
-                    Folk på Racezoo kan söka efter lopp och den första filtreringen dom gör är på var, när och vad loppet dom söker efter är.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 l6 push-l3">
-                <div class="col s12">
-                    <h3 id="account">Arrangörens konto</h3>
+
+            <div id="wrapper">
+
+                <div class="row">
+                    <form id="1-2" action="#">
+
+
+                        <div class="col s12 l6 push-l3">
+                            <div class="col s12 bot-space">
+                                <h3 id="account">Arrangörens e-post</h3>
+                                <p>Ange e-post för administrationskonto.</p>
+                                <h4 class="login">Logga in</h4>
+                                <p class="login">E-postadressen används redan. Logga in för att kunna administrera loppet.</p>
+                                <h4 class="register">Registerar nytt konto</h4>
+                                <p class="register">E-postadressen är inte registerad. Registera ett nytt konto för att kunna administrera loppet.</p>
+                            </div>
+                            <div class="input-field col s12 l6">
+                                <input id="email" type="email" class="">
+                                <label for="email">E-post</label>
+                            </div>
+
+                            <div class="input-field col s12 l6 login register">
+                                <input id="password" type="password" class="">
+                                <label for="password">Lösenord</label>
+                            </div>
+
+
+                            <div class="input-field col s12 l6 register">
+                                <input id="name" type="text" class="">
+                                <label for="text">Förnamn</label>
+                            </div>
+
+
+                            <div class="input-field col s12 l6 register">
+                                <input id="lastname" type="text" class="">
+                                <label for="text">Efternamn</label>
+                            </div>
+
+
+
+                            <div class="input-field col s12 l12 register">
+                                <input id="address" type="text" class="">
+                                <label for="text">Adress</label>
+                            </div>
+
+                            <div class="input-field col s12 l6 register">
+                                <input id="phonenumber" type="text" class="">
+                                <label for="text">Telefon</label>
+                            </div>
+
+
+                            <div class="input-field col s12 l6 register">
+                                <input id="club" type="text" class="">
+                                <label for="text">Förening/klubb</label>
+                            </div>
+
+                            <div class="col s12 register">
+                                <label for="gender">Kön</label>
+                            </div>
+                            <div class="input-field col s12 l6 register">
+                                <input id="male" type="radio" name="gender" value="male">
+                                <label for="male">Man</label>
+                                <input id="female" type="radio" name="gender" value="female">
+                                <label for="female">Kvinna</label>
+                            </div>
+
+                            <div class="input-field col s12 l6 register">
+                                <input id="birthdate" type="date" class="datepicker">
+                                <label for="birthdate">Födelsedatum</label>
+                            </div>
+                            <div class="input-field col s12 l12 register">
+                                <input id="CheckEmail" type="email" class="">
+                                <label for="email">Bekräfta mailadress</label>
+                            </div>
+
+                        </div>
+                    </form>
                 </div>
-                <div class="input-field col s12 l6">
-                    <input id="email" type="email" class="validate">
-                    <label for="email">E-post</label>
+                <div class="row">
+                    <div class="col s12 l6 push-l3 arrow-nav">
+                        <a class="btn left" href="s1-1.html"><i class="material-icons left">chevron_left</i>Tillbaka</a>
+                        <a class="btn right" href="s1-complete.html"><i class="material-icons right">done</i>Slutför</a>
+                    </div>
+                    <!-- <div class="col s12 l6 push-l3 arrow-nav">
+                    <a class="btn left" href="s1-1.html"><i class="material-icons left">chevron_left</i>Tillbaka</a>
+
+                    <div class="center-align right">
+                    <a class="btn" href="s2.html"><i class="material-icons right">chevron_right</i>Fortsätt</a>
+                    <p class="inline">eller är du klar?</p>
+                    <a class="btn inline" href="s5.hrml"><i class="material-icons left">publish</i>Publicera</a>
                 </div>
-
-                <div class="input-field col s12 l6">
-                    <input id="password" type="password" class="validate">
-                    <label for="password">Lösenord</label>
-                </div>
-
-
-                <div class="input-field col s12 l6">
-                    <input id="name" type="text" class="validate">
-                    <label for="text">Förnamn</label>
-                </div>
-
-
-                <div class="input-field col s12 l6">
-                    <input id="lastname" type="text" class="validate">
-                    <label for="text">Efternamn</label>
-                </div>
-
-
-
-                <div class="input-field col s12 l12">
-                    <input id="address" type="text" class="validate">
-                    <label for="text">Adress</label>
-                </div>
-
-                <div class="input-field col s12 l6">
-                    <input id="phonenumber" type="text" class="validate">
-                    <label for="text">Telefon</label>
-                </div>
-
-
-                <div class="input-field col s12 l6">
-                    <input id="club" type="text" class="validate">
-                    <label for="text">Förening/klubb</label>
-                </div>
-
-                <div class="col s12"><label for="gender">Kön</label></div>
-                <div class="input-field col s12 l6">
-                    <input id="male" type="radio" name="gender" value="male">
-                    <label for="male">Man</label>
-                    <input id="female" type="radio" name="gender" value="female">
-                    <label for="female">Kvinna</label>
-                </div>
-
-                <div class="input-field col s12 l6">
-                    <input id="birthdate" type="text" class="datepicker validate">
-                    <label for="birthdate">Födelsedatum</label>
-                </div>
-
-                <div class="input-field col s12 l12">
-                    <input id="CheckEmail" type="email" class="validate">
-                    <label for="email">Bekräfta mailadress</label>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 l6 push-l3 arrow-nav">
-                <!-- <a class="btn left"><i class="material-icons left">chevron_left</i>Tillbaka</a> -->
-                <a class="btn right" href="s2.html"><i class="material-icons right">chevron_right</i>Nästa steg</a>
-            </div>
+            </div> -->
         </div>
     </div>
 </main>
@@ -134,11 +143,61 @@
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script> -->
 <script>$(document).ready(function() {
+
+    // https://jqueryvalidation.org/reference/
+    // $("#1-2").validate({
+    //     rules: {
+    //         field: {
+    //             required: true,
+    //             email: true
+    //         }
+    //     }
+    // });
+
+
     $('select').material_select();
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
         selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+
+
+    var acc = [
+        "test@test.com",
+        "robin@test.com",
+        "basil@test.com",
+        "filippa@test.com"
+    ];
+
+    // email regex
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+
+    $(".login, .register").hide();
+
+
+    var wto;
+    $("#email").on("input", function() {
+        clearTimeout(wto);
+        wto = setTimeout(function() {
+            var input = $("#email").val().toLowerCase();
+            if(input.match(re)) {
+                if ($.inArray(input, acc) > -1) {
+                    $(".register").hide();
+                    $(".login").show("100");
+                }
+                else {
+                    $(".login").hide();
+                    $(".register").show("100");
+                }
+            }
+            else {
+                $(".login, .register").hide();
+            }
+        }, 500);
     });
 });</script>
 </body>

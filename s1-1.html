@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="materialize.clockpicker.css">
+
+
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,7 +23,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="s0.html">Hitta lopp</a></li>
                     <li><a href="#">Mina lopp</a></li>
-                    <li><a href="s1.html">Skapa lopp</a></li>
+                    <li><a href="s1-1.html">Skapa lopp</a></li>
                 </ul>
             </div>
         </nav>
@@ -27,11 +31,13 @@
 
             <div class="row" id="breadcrumb">
                 <div class="col s12 flexit valign-wrapper">
-                    <!-- <img src="images/behind.png" alt="navigation" height="60" width="60"> -->
-                    <!--<img src="images/behind.png" alt="navigation" height="60" width="60">-->
-                    <a href="#basic">Grunduppgifter</a><img src="images/between.png" alt="navigation" height="60" width="60">
-                    <a href="#account">Konto</a><img src="images/between.png" alt="navigation" height="60" width="60">
-                    <a href="#profile">bekäftelse</a><img src="images/front.png" alt="navigation" height="60" width="60">
+                    <img src="images/start.png" alt="navigation" height="60" width="60">
+                    <a href="#">Grunduppgifter</a>
+                    <img src="images/between.png" alt="navigation" height="60" width="60">
+                    <a href="#">Konto</a>
+                    <img src="images/between.png" alt="navigation" height="60" width="60">
+                    <a href="#">Slutför</a>
+                    <img src="images/front.png" alt="navigation" height="60" width="60">
                 </div>
             </div>
 
@@ -57,42 +63,42 @@
                     <h3 id="basic">Grunderna</h3>
                 </div>
                 <div class="input-field col s12">
-                    <input id="race_name" type="text" class="validate">
-                    <label for="Race_name">Race Namn</label>
+                    <input id="race-name" type="text" class="">
+                    <label for="race-name">Race Namn</label>
                 </div>
                 <div class="input-field col s12">
-                    <select>
-                        <option value="1">Typ av lopp</option>
-                        <option value="2">Löpning</option>
-                        <option value="3">Trail run</option>
-                        <option value="4">Triathlon</option>
-                        <option value="2">OCR</option>
-                        <option value="3">Cykling</option>
-                        <option value="4">Simning</option>
-                        <option value="2">Längdskidor</option>
-                        <option value="3">Swim & run</option>
-                        <option value="4">Mulitisport</option>
-                        <option value="2">Duathlon</option>
-                        <option value="3">Enduro MTB</option>
+                    <select id="type">
+                        <option value="">Typ av lopp</option>
+                        <option value="Löpning">Löpning</option>
+                        <option value="Trail run">Trail run</option>
+                        <option value="Triathlon">Triathlon</option>
+                        <option value="OCR">OCR</option>
+                        <option value="Cykling">Cykling</option>
+                        <option value="Simning">Simning</option>
+                        <option value="Längdskidor">Längdskidor</option>
+                        <option value="Swim & run">Swim & run</option>
+                        <option value="Mulitisport">Mulitisport</option>
+                        <option value="Duathlon">Duathlon</option>
+                        <option value="Enduro MTB">Enduro MTB</option>
                     </select>
                     <label>Sport</label>
                 </div>
                 <div class="input-field col s12 l6">
-                    <input id="date" type="text" class="datepicker validate">
+                    <input id="date" type="text" class="datepicker">
                     <label for="date">Datum</label>
                 </div>
                 <div class="input-field col s12 l6">
-                    <input id="tid" type="text" class="validate">
-                    <label for="tid">Tid</label>
+                    <input id="time" type="time" class="timepicker">
+                    <label for="time">Tid</label>
                 </div>
 
                 <div class="input-field col s12">
-                    <input id="adress" type="text" class="validate">
-                    <label for="adress">Adress till tävlingområde</label>
+                    <input id="address" type="text" class="">
+                    <label for="address">Adress till tävlingområde</label>
                 </div>
                 <div class="input-field col s12">
-                    <input id="Organisatör" type="text" class="validate">
-                    <label for="Organisatör">Organisatör</label>
+                    <input id="organizer" type="text" class="">
+                    <label for="organizer">Organisatör</label>
                 </div>
             </div>
         </div>
@@ -115,12 +121,55 @@
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-<script>$(document).ready(function() {
+<script type="text/javascript" src="materialize.clockpicker.js"></script>
+
+<script type="text/javascript">
+$.extend({
+    getUrlVars: function(){
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(var i = 0; i < hashes.length; i++)
+        {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    },
+    getUrlVar: function(name){
+        return $.getUrlVars()[name];
+    }
+});
+
+
+$(document).ready(function() {
     $('select').material_select();
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
         selectYears: 15 // Creates a dropdown of 15 years to control year
     });
-});</script>
+    //Time Picker:
+    $('.timepicker').pickatime({
+        // default: '00:00:00',
+        twelvehour: false, // change to 12 hour AM/PM clock from 24 hour
+        donetext: 'OK',
+        autoclose: true,
+        vibrate: true // vibrate the device when dragging clock hand
+    });
+
+    console.log($.getUrlVar("race-name"));
+
+    if($.getUrlVar("race-name")) {
+        $("#race-name").val($.getUrlVar("race-name"));
+    }
+
+if ($.getUrlVar("type")) {
+
+    $('#type option:eq('+$.getUrlVar("type")+')').prop('selected', true)
+
+}
+
+});
+</script>
 </body>
 </html>
