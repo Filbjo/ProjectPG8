@@ -32,7 +32,9 @@
                     <img src="images/behind.png" alt="navigation" height="60" width="60">
                     <a href="#distances">Distanser</a>
                     <img src="images/between.png" alt="navigation" height="60" width="60">
-                    <a href="#start-groups">Startgrupper</a>
+                    <a href="#start-groups">Startgrupper</a>                    
+                    <img src="images/between.png" alt="navigation" height="60" width="60">
+                    <a href="#">Slutför</a>
                     <img src="images/front.png" alt="navigation" height="60" width="60">
                 </div>
             </div>
@@ -51,20 +53,6 @@
             </div>
             <div class="row">
                 <div class="col s12 l8 push-l2" id="created-distances-container">
-                    <!-- <div class="col s12 item" data-value-id="">
-                    <div class="col s6 head">Distans</div>
-                    <div class="col s6 data"><span data-value-distance=""></span> km</div>
-                    <div class="col s6 head">Klass</div>
-                    <div class="col s6 data"><span data-value-class=""></span></div>
-                    <div class="col s6 head">Antal deltagare i gruppanmälan</div>
-                    <div class="col s6 data"><span data-value-amount-in-group=""></span></div>
-                    <div class="col s6 head">Anmälningsavgiften gäller</div>
-                    <div class="col s6 data"><span data-value-price-for=""></span></div>
-                    <div class="col s6 head">Pris (inkl. <span data-value-tax=""></span>% moms)</div>
-                    <div class="col s6 data"><span data-value-price=""></span> SEK</div>
-                    <div class="col s6 head">Antal deltagare</div>
-                    <div class="col s6 data"><span data-value-registered-participants="0"></span>/<span data-value-max-participants=""></span></div>
-                </div> -->
                 <table class="responsive-table">
                     <thead>
                         <tr>
@@ -120,7 +108,7 @@
                                     <option value="Kids (under 13 år)">Kids (under 13 år)</option>
                                     <option value="custom">Ange egen...</option>
                                 </select>
-                                <input id="custom-class" type="text" class="validate" placeholder="Ange din egen klass här..." name="class">
+                                <input id="custom-class" type="text" class="" placeholder="Ange din egen klass här..." name="class">
                                 <label>Klass</label>
                             </div>
                         </div>
@@ -131,7 +119,7 @@
                             <label for="unlimited-participants-in-group">Obegränsat</label>
                             <input class="with-gap" name="amount-in-group" type="radio" id="limited-participants-in-group" value="Begränsat" />
                             <label for="limited-participants-in-group">Begränsat</label>
-                            <input id="custom-participants-in-group" type="text" name="max-amount-in-group" class="validate" placeholder="Ange antal deltagare..." />
+                            <input id="custom-participants-in-group" type="text" name="max-amount-in-group" class="" placeholder="Ange antal deltagare..." />
                         </div>
 
                         <div class="col s12 bot-space">
@@ -145,14 +133,14 @@
 
                         <div class="col s12 bot-space">
                             <div class="input-field inline">
-                                <input id="max-amount" type="text" class="validate" value="100" name="max-participants" />
+                                <input id="max-amount" type="text" class="" value="100" name="max-participants" />
                                 <label for="max-amount">Max antal anmälningar</label>
                             </div>
                         </div>
 
                         <div class="col s6 bot-space">
                             <div class="input-field inline">
-                                <input id="registration-fee" type="text" class="validate" value="0" name="price">
+                                <input id="registration-fee" type="text" class="" value="0" name="price">
                                 <label for="registration-fee">Anmälningsavgift</label>
                             </div>
                             <span>SEK</span>
@@ -177,11 +165,11 @@
                         </div>
                         <div id="start-number" class="col s12">
                             <div class="input-field inline">
-                                <input id="start" type="text" class="validate" value="1">
+                                <input id="start" type="text" class="" value="1">
                                 <label for="start">Börjar med nummer</label>
                             </div>
                             <div class="input-field inline">
-                                <input id="end" type="text" class="validate" value="100">
+                                <input id="end" type="text" class="" value="100">
                                 <label for="end">Slutar med nummer</label>
                             </div>
                         </div>
@@ -242,8 +230,8 @@
 
         <div class="row">
             <div class="col s12 l8 push-l2 arrow-nav">
-                <a class="btn left" href="s2.html"><i class="material-icons left">chevron_left</i>Tillbaka</a>
-                <a class="btn right" href="#"><i class="material-icons right">chevron_right</i>Nästa steg</a>
+                <a class="btn left" href="s2-2.html"><i class="material-icons left">chevron_left</i>Tillbaka</a>
+                <a class="btn right" href="s3-complete.html"><i class="material-icons right">done</i>Slutför</a>
             </div>
         </div>
     </main>
@@ -251,7 +239,7 @@
         <div class="footer-copyright blue-grey-text text-darken-4">
             <div class="container">
                 © 2017 Copyright
-                <a class="blue-grey-text text-darken-4 right" href="#">Mer länkar</a>
+                <a class="blue-grey-text text-darken-4 right" href="#"><i class="material-icons left">keyboard_arrow_up</i>Till topp</a>
             </div>
         </div>
     </footer>

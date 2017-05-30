@@ -76,7 +76,7 @@
                         <option value="Cykling">Cykling</option>
                         <option value="Simning">Simning</option>
                         <option value="Längdskidor">Längdskidor</option>
-                        <option value="Swim & run">Swim & run</option>
+                        <option value="Swim and run">Swim & run</option>
                         <option value="Mulitisport">Mulitisport</option>
                         <option value="Duathlon">Duathlon</option>
                         <option value="Enduro MTB">Enduro MTB</option>
@@ -114,7 +114,7 @@
     <div class="footer-copyright blue-grey-text text-darken-4">
         <div class="container">
             © 2017 Copyright
-            <a class="blue-grey-text text-darken-4 right" href="#">Mer länkar</a>
+            <a class="blue-grey-text text-darken-4 right" href="#"><i class="material-icons left">keyboard_arrow_up</i>Till topp</a>
         </div>
     </div>
 </footer>
@@ -157,16 +157,14 @@ $(document).ready(function() {
         vibrate: true // vibrate the device when dragging clock hand
     });
 
-    console.log($.getUrlVar("race-name"));
 
     if($.getUrlVar("race-name")) {
-        $("#race-name").val($.getUrlVar("race-name"));
+        $("#race-name").val(decodeURI($.getUrlVar("race-name")));
     }
 
 if ($.getUrlVar("type")) {
-
-    $('#type option:eq('+$.getUrlVar("type")+')').prop('selected', true)
-
+    $('#type').val(decodeURI($.getUrlVar("type")));
+    $('#type').material_select();
 }
 
 });

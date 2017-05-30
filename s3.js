@@ -84,29 +84,14 @@ $(document).ready(function() {
                     }
 
                     values[this.name] = $(this).val();
-                    // console.log(this.name + " : " +$(this).val());
 
                 }
             });
 
-            values["id"] = Math.floor((Math.random() * 9999999999999999) + 1).toString();
+            var distanceId = Math.floor((Math.random() * 9999999999999999) + 1).toString();
 
-            // console.log(values);
+            values["id"] = distanceId;
 
-            // var newDistElem = '<div class="col s12 item" data-value-id="'+values["id"]+'">'+
-            // '<div class="col s6 head">Distans</div>'+
-            // '<div class="col s6 data"><span data-value-distance="'+values["distance"]+'">'+values["distance"]+'</span> KM</div>'+
-            // '<div class="col s6 head">Klass</div>'+
-            // '<div class="col s6 data"><span data-value-class="'+values["class"]+'">'+values["class"]+'</span></div>'+
-            // '<div class="col s6 head">Antal deltagare i gruppanmälan</div>'+
-            // '<div class="col s6 data"><span data-value-amount-in-group="'+values["amount-in-group"]+'">'+values["amount-in-group"]+'</span></div>'+
-            // '<div class="col s6 head">Anmälningsavgiften gäller</div>'+
-            // '<div class="col s6 data"><span data-value-price-for="'+values["price-for"]+'">'+values["price-for"]+'</span></div>'+
-            // '<div class="col s6 head">Pris (inkl. <span data-value-tax="'+values["tax"]+'">'+values["tax"]+'</span>% moms)</div>'+
-            // '<div class="col s6 data"><span data-value-price="'+values["price"]+'">'+values["price"]+'</span> SEK</div>'+
-            // '<div class="col s6 head">Antal deltagare</div>'+
-            // '<div class="col s6 data"><span data-value-registered-participants="0"></span>0/<span data-value-max-participants="'+values["max-participants"]+'">'+values["max-participants"]+'</span></div>'+
-            // '</div>';
 
             var newDistElem = '<tr class="item" data-value-id="'+values["id"]+'">'+
             '<td>'+values["distance"]+'</td>'+
@@ -118,15 +103,16 @@ $(document).ready(function() {
             '<td><a href="#" class="red btn delete-distance">X</a></td>'+
             '</tr>';
 
-            // var $stuff = $(newDistElem);
-            // $.each( values, function( key, value ) {
-            //     $stuff.find("span").data("value-"+key, value);
-            //     console.log(key + " : " + value);
-            // });
 
-
-            console.log(newDistElem);
             $("#distance-items-holder").append(newDistElem);
+
+
+            $("#distance-items-holder").find("tr[data-value-id='" + distanceId + "'] .delete-distance").on('click', function(event) {
+                event.preventDefault();
+                $(this).parent().parent().remove();
+            });
+
+
             $('#new-distance').trigger("reset");
             hide_inputs();
         });
