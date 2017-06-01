@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Hitta ditt lopp</title>
+    <title>Steg 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="https://d1muf25xaso8hp.cloudfront.net/http://s3.amazonaws.com/appforest_uf/f1432201662502x414470874238759300/RZ_favicon.jpg?w=124.80000000000001&amp;h=&amp;fit=max">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
@@ -40,134 +40,81 @@
                     <img src="images/front.png" alt="navigation" height="60" width="60">
                 </div>
             </div>
+            <div id="wrapper">
+                <div class="row">
+                    <div class="col s12 l6 push-l3">
+                        <h2>Hjälp folk att hitta ert lopp</h2>
+                        <p>
+                            Folk på Racezoo kan söka efter lopp och den första filtreringen dom gör är på var, när och vad loppet dom söker efter är.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 l6 push-l3">
+                        <div class="col s12">
+                            <h3 id="basic">Grunderna</h3>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="race-name" type="text" class="">
+                            <label for="race-name">Race Namn</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <select id="type">
+                                <option value="">Typ av lopp</option>
+                                <option value="Löpning">Löpning</option>
+                                <option value="Trail run">Trail run</option>
+                                <option value="Triathlon">Triathlon</option>
+                                <option value="OCR">OCR</option>
+                                <option value="Cykling">Cykling</option>
+                                <option value="Simning">Simning</option>
+                                <option value="Längdskidor">Längdskidor</option>
+                                <option value="Swim and run">Swim & run</option>
+                                <option value="Mulitisport">Mulitisport</option>
+                                <option value="Duathlon">Duathlon</option>
+                                <option value="Enduro MTB">Enduro MTB</option>
+                            </select>
+                            <label>Sport</label>
+                        </div>
+                        <div class="input-field col s12 l6">
+                            <input id="date" type="text" class="datepicker">
+                            <label for="date">Datum</label>
+                        </div>
+                        <div class="input-field col s12 l6">
+                            <input id="time" type="time" class="timepicker">
+                            <label for="time">Tid</label>
+                        </div>
 
-            <!-- <div class="row" id="icons">
-            <div class="col s12 flexit valign-wrapper">
-            <i class="medium material-icons">mode_edit</i>
-            <i class="medium material-icons">mail_outline</i>
-            <i class="medium material-icons">done</i>
-        </div>
-    </div> -->
-    <div id="wrapper">
-        <div class="row">
-            <div class="col s12 l6 push-l3">
-                <h2>Hjälp folk att hitta ert lopp</h2>
-                <p>
-                    Folk på Racezoo kan söka efter lopp och den första filtreringen dom gör är på var, när och vad loppet dom söker efter är.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 l6 push-l3">
-                <div class="col s12">
-                    <h3 id="basic">Grunderna</h3>
+                        <div class="input-field col s12">
+                            <input id="address" type="text" class="">
+                            <label for="address">Adress till tävlingområde</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="organizer" type="text" class="">
+                            <label for="organizer">Organisatör</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-field col s12">
-                    <input id="race-name" type="text" class="">
-                    <label for="race-name">Race Namn</label>
-                </div>
-                <div class="input-field col s12">
-                    <select id="type">
-                        <option value="">Typ av lopp</option>
-                        <option value="Löpning">Löpning</option>
-                        <option value="Trail run">Trail run</option>
-                        <option value="Triathlon">Triathlon</option>
-                        <option value="OCR">OCR</option>
-                        <option value="Cykling">Cykling</option>
-                        <option value="Simning">Simning</option>
-                        <option value="Längdskidor">Längdskidor</option>
-                        <option value="Swim and run">Swim & run</option>
-                        <option value="Mulitisport">Mulitisport</option>
-                        <option value="Duathlon">Duathlon</option>
-                        <option value="Enduro MTB">Enduro MTB</option>
-                    </select>
-                    <label>Sport</label>
-                </div>
-                <div class="input-field col s12 l6">
-                    <input id="date" type="text" class="datepicker">
-                    <label for="date">Datum</label>
-                </div>
-                <div class="input-field col s12 l6">
-                    <input id="time" type="time" class="timepicker">
-                    <label for="time">Tid</label>
-                </div>
-
-                <div class="input-field col s12">
-                    <input id="address" type="text" class="">
-                    <label for="address">Adress till tävlingområde</label>
-                </div>
-                <div class="input-field col s12">
-                    <input id="organizer" type="text" class="">
-                    <label for="organizer">Organisatör</label>
+                <div class="row">
+                    <div class="col s12 l6 push-l3 arrow-nav">
+                        <!-- <a class="btn left"><i class="material-icons left">chevron_left</i>Tillbaka</a> -->
+                        <a class="btn right" href="s1-2.html"><i class="material-icons right">chevron_right</i>Nästa steg</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col s12 l6 push-l3 arrow-nav">
-                <!-- <a class="btn left"><i class="material-icons left">chevron_left</i>Tillbaka</a> -->
-                <a class="btn right" href="s1-2.html"><i class="material-icons right">chevron_right</i>Nästa steg</a>
+        </main>
+        <footer class="page-footer rz-bg-color">
+            <div class="footer-copyright blue-grey-text text-darken-4">
+                <div class="container">
+                    © 2017 Copyright
+                    <a class="blue-grey-text text-darken-4 right" href="#"><i class="material-icons left">keyboard_arrow_up</i>Till topp</a>
+                </div>
             </div>
-        </div>
+        </footer>
     </div>
-</main>
-<footer class="page-footer rz-bg-color">
-    <div class="footer-copyright blue-grey-text text-darken-4">
-        <div class="container">
-            © 2017 Copyright
-            <a class="blue-grey-text text-darken-4 right" href="#"><i class="material-icons left">keyboard_arrow_up</i>Till topp</a>
-        </div>
-    </div>
-</footer>
-</div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-<script type="text/javascript" src="materialize.clockpicker.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="materialize.clockpicker.js"></script>
 
-<script type="text/javascript">
-$.extend({
-    getUrlVars: function(){
-        var vars = [], hash;
-        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-        for(var i = 0; i < hashes.length; i++)
-        {
-            hash = hashes[i].split('=');
-            vars.push(hash[0]);
-            vars[hash[0]] = hash[1];
-        }
-        return vars;
-    },
-    getUrlVar: function(name){
-        return $.getUrlVars()[name];
-    }
-});
-
-
-$(document).ready(function() {
-    $('select').material_select();
-    $('.datepicker').pickadate({
-        selectMonths: true, // Creates a dropdown to control month
-        selectYears: 15 // Creates a dropdown of 15 years to control year
-    });
-    //Time Picker:
-    $('.timepicker').pickatime({
-        // default: '00:00:00',
-        twelvehour: false, // change to 12 hour AM/PM clock from 24 hour
-        donetext: 'OK',
-        autoclose: true,
-        vibrate: true // vibrate the device when dragging clock hand
-    });
-
-
-    if($.getUrlVar("race-name")) {
-        $("#race-name").val(decodeURI($.getUrlVar("race-name")));
-    }
-
-if ($.getUrlVar("type")) {
-    $('#type').val(decodeURI($.getUrlVar("type")));
-    $('#type').material_select();
-}
-
-});
-</script>
+    <script type="text/javascript" src="s1-1.js"></script>
 </body>
 </html>

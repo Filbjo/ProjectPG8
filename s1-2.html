@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Hitta ditt lopp</title>
+    <title>Steg 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="https://d1muf25xaso8hp.cloudfront.net/http://s3.amazonaws.com/appforest_uf/f1432201662502x414470874238759300/RZ_favicon.jpg?w=124.80000000000001&amp;h=&amp;fit=max">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
@@ -19,7 +19,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="s0.html">Hitta lopp</a></li>
                     <li><a href="#">Mina lopp</a></li>
-                    <li><a href="s1.html">Skapa lopp</a></li>
+                    <li><a href="s1-1.html">Skapa lopp</a></li>
                 </ul>
             </div>
         </nav>
@@ -143,62 +143,6 @@
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script> -->
-<script>$(document).ready(function() {
-
-    // https://jqueryvalidation.org/reference/
-    // $("#1-2").validate({
-    //     rules: {
-    //         field: {
-    //             required: true,
-    //             email: true
-    //         }
-    //     }
-    // });
-
-
-    $('select').material_select();
-    $('.datepicker').pickadate({
-        selectMonths: true, // Creates a dropdown to control month
-        selectYears: 15 // Creates a dropdown of 15 years to control year
-    });
-
-
-    var acc = [
-        "test@test.com",
-        "robin@test.com",
-        "basil@test.com",
-        "filippa@test.com"
-    ];
-
-    // email regex
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
-
-    $(".login, .register").hide();
-
-
-    var wto;
-    $("#email").on("input", function() {
-        clearTimeout(wto);
-        wto = setTimeout(function() {
-            var input = $("#email").val().toLowerCase();
-            if(input.match(re)) {
-                if ($.inArray(input, acc) > -1) {
-                    $(".register").hide();
-                    $(".login").show("100");
-                }
-                else {
-                    $(".login").hide();
-                    $(".register").show("100");
-                }
-            }
-            else {
-                $(".login, .register").hide();
-            }
-        }, 500);
-    });
-});</script>
+<script type="text/javascript" src="s1-2.js"></script>
 </body>
 </html>
